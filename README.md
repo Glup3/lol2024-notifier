@@ -22,3 +22,5 @@ docker image inspect glup3/lol2024-notifier:latest-amd64
 ## Note
 
 You need to build for AMD64 since my Synology NAS requires AMD64 build. `docker-compose.yml` is for local building.
+
+https://www.theo2.co.uk/events/detail/the-2024-league-of-legends-world-championship-finals
