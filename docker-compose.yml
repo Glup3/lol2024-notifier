@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  lol2024-worlds-finals-notifier:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lol2024-worlds-finals-notifier
+    volumes:
+      - .env:/app/.env

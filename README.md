@@ -1,4 +1,4 @@
-# League of Legends Worlds 2024 Final Ticket Notifier
+# League of Legends Worlds 2024 Finals Ticket Notifier
 
 ## Getting Started
 
@@ -8,3 +8,7 @@ python ./main.py
 ```
 
 ## Docker
+
+```sh
+docker compose up -d
+```

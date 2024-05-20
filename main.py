@@ -1,4 +1,6 @@
 import requests
+import schedule
+import time
 from bs4 import BeautifulSoup
 from datetime import datetime
 from dotenv import load_dotenv
@@ -9,7 +11,7 @@ load_dotenv()
 def log(message):
     current_datetime = datetime.now()
     formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-    print(f"[{formatted_datetime}] {message}")
+    print(f"[{formatted_datetime}] {message}", flush=True)
 
 def check_webpage():
     url = "https://www.theo2.co.uk/events/detail/the-2024-league-of-legends-world-championship-finals"
@@ -56,4 +58,8 @@ def main():
         
 
 if __name__ == "__main__":
-    main()
+    schedule.every(1).minutes.do(main)
+
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
