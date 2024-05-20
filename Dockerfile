@@ -1,4 +1,4 @@
-FROM python:3.12.3
+FROM amd64/python:3.12.3-alpine
 COPY main.py /app/main.py
 COPY requirements.txt /app/requirements.txt
 WORKDIR /app
